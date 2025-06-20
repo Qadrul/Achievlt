@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="450" prefHeight="400">
+    <children>
+        <VBox alignment="CENTER" spacing="12.0" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+            <children>
+                <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+                <TextField fx:id="fullNameField" promptText="Full Name" prefWidth="350" />
+
+                <TextField fx:id="usernameField" promptText="Username" prefWidth="350" />
+
+                <TextField fx:id="emailField" promptText="Email" prefWidth="350" />
+
+                <PasswordField fx:id="passwordField" promptText="Password" prefWidth="350" />
+
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" prefWidth="350" />
+
+                <Button text="Register" fx:id="registerButton" prefWidth="350" />
+
+                <Hyperlink fx:id="loginLink" text="Already have an account? Login here" />
+
+                <Label fx:id="errorLabel" textFill="red" visible="false" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
