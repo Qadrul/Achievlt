@@ -1,0 +1,138 @@
+.root {
+    -fx-background-color: #F8F8F8; /* Warna latar belakang umum */
+    -fx-font-family: "Quicksand", "Segoe UI", sans-serif; /* Font default */
+}
+
+/* Gaya untuk tombol umum */
+.button {
+    -fx-background-color: #E5D6FF; /* Lilac */
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15; /* Rounded corners */
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 5); /* Light shadow */
+}
+
+.button:hover {
+    -fx-background-color: #d8c2f5;
+}
+
+/* Gaya untuk panel atau kartu */
+.card-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 15, 0, 0, 8);
+    -fx-padding: 20;
+}
+
+/* Gaya untuk TextField dan DatePicker */
+.text-field, .date-picker {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d0d0d0;
+    -fx-padding: 8 10;
+}
+
+/* Gaya untuk Label/Header */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.sub-header-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Gaya untuk ListCell di ListView */
+.list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #D6FFF6; /* Mint */
+    -fx-text-fill: #333333;
+    -fx-background-radius: 10;
+}
+
+.list-view .list-cell:filled:hover {
+    -fx-background-color: #e0fcf5;
+    -fx-background-radius: 10;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* Gaya untuk ProgressBar */
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #FFD6D6, #D6FFF6); /* Peach to Mint gradient */
+    -fx-background-insets: 3;
+    -fx-background-radius: 5;
+}
+
+.progress-bar {
+    -fx-control-inner-background: #E0E0E0; /* Background of the bar */
+    -fx-background-radius: 7;
+    -fx-padding: 0;
+}
+
+/* Custom background colors */
+.bg-peach {
+    -fx-background-color: #FFD6D6;
+}
+
+.bg-mint {
+    -fx-background-color: #D6FFF6;
+}
+
+.bg-lilac {
+    -fx-background-color: #E5D6FF;
+}
+
+.bg-white {
+    -fx-background-color: white;
+}
+
+/* Floating Action Button (FAB) */
+.fab-button {
+    -fx-background-color: #FFD6D6; /* Peach */
+    -fx-background-radius: 50%; /* Circle shape */
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 10);
+}
+
+.fab-button:hover {
+    -fx-background-color: #ffc0c0;
+}
+
+/* ... (kode CSS lainnya) ... */
+
+/* Gaya untuk panel atau kartu */
+.card-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 15, 0, 0, 8);
+    -fx-padding: 20px; /* Pastikan ini ada dan sesuai */
+}
+
+.road-goals-card {
+    -fx-padding: 10px; /* Padding 10px di semua sisi */
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 15, 0, 0, 8);
+}
+
+.combo-box, .date-picker {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d0d0d0;
+    -fx-padding: 5 8;
+}

@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.achievlt.Create"
-            prefHeight="400.0" prefWidth="600.0">
-
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ComboBox?> <?import javafx.scene.layout.StackPane?> <AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.CreateTujuanController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutX="172.0" layoutY="64.0" prefHeight="640.0" prefWidth="680.0" spacing="20" styleClass="card-panel" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="172.0" AnchorPane.topAnchor="64.0">
+            <children>
+                <Label styleClass="header-label" text="Buat Tujuan Baru">
+                    <font>
+                        <Font name="Quicksand Bold" size="24.0" />
+                    </font>
+                </Label>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Nama Tujuan" />
+                        <TextField fx:id="namaTujuanField" promptText="Misal: Belajar Bahasa Jepang" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Deadline" />
+                        <DatePicker fx:id="deadlinePicker" promptText="Pilih tanggal deadline" styleClass="date-picker" />
+                    </children>
+                </VBox>
+                <VBox VBox.vgrow="ALWAYS" spacing="10.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                            <children>
+                                <Label styleClass="sub-header-label" text="Langkah-Langkah (Road Goals)" />
+                                <Button onAction="#addRoadGoalField" styleClass="button" text="+" style="-fx-background-radius: 50%; -fx-min-width: 30px; -fx-min-height: 30px;" />
+                            </children>
+                        </HBox>
+                        <ScrollPane fx:id="roadGoalsScrollPane" fitToWidth="true" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+                            <content>
+                                <VBox fx:id="roadGoalsContainer" spacing="10.0">
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </VBox>
+                <Label fx:id="errorMessageLabel" style="-fx-text-fill: red;" text="" />
+                <HBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <Button onAction="#handleSaveTujuan" prefWidth="150.0" styleClass="button" text="Simpan Tujuan" />
+                        <Button onAction="#handleCancel" prefWidth="150.0" styleClass="button" text="Batal" style="-fx-background-color: #FFD6D6;" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+            </padding>
+        </VBox>
+    </children>
 </AnchorPane>

@@ -1,31 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" prefWidth="450" prefHeight="400">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.controller.RegisterController">
     <children>
-        <VBox alignment="CENTER" spacing="12.0" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+        <VBox alignment="CENTER" focusTraversable="true" layoutX="569.0" layoutY="134.0" prefHeight="532.0" prefWidth="380.0" spacing="20" styleClass="card-panel" AnchorPane.bottomAnchor="102.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="134.0">
             <children>
-                <Label text="Register" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
-
-                <TextField fx:id="fullNameField" promptText="Full Name" prefWidth="350" />
-
-                <TextField fx:id="usernameField" promptText="Username" prefWidth="350" />
-
-                <TextField fx:id="emailField" promptText="Email" prefWidth="350" />
-
-                <PasswordField fx:id="passwordField" promptText="Password" prefWidth="350" />
-
-                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" prefWidth="350" />
-
-                <Button text="Register" fx:id="registerButton" prefWidth="350" />
-
-                <Hyperlink fx:id="loginLink" text="Already have an account? Login here" />
-
-                <Label fx:id="errorLabel" textFill="red" visible="false" />
+                <Label styleClass="header-label" text="Daftar Akun Baru">
+                    <font>
+                        <Font name="Quicksand Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label text="Isi detail di bawah untuk membuat akun baru.">
+                    <font>
+                        <Font name="Quicksand Regular" size="14.0" />
+                    </font>
+                </Label>
+                <VBox alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="Username" />
+                        <TextField fx:id="usernameField" promptText="Pilih username" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="Password" />
+                        <PasswordField fx:id="passwordField" promptText="Masukkan password" styleClass="text-field" />
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="Konfirmasi Password" />
+                        <PasswordField fx:id="confirmPasswordField" promptText="Konfirmasi password" styleClass="text-field" />
+                    </children>
+                </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="147.0" prefWidth="340.0">
+               <children>
+                      <Button onAction="#handleRegister" prefWidth="200.0" styleClass="button" text="Daftar" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Sudah punya akun?">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                        </Label>
+                            <Button alignment="CENTER" contentDisplay="BOTTOM" onAction="#handleBackToLogin" prefWidth="200.0" styleClass="button" text="Masuk" />
+                            <Label fx:id="errorMessageLabel" style="-fx-text-fill: red;" text="" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+            </padding>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="768.0" prefWidth="500.0" style="-fx-background-color: #FFD6D6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../../../../OneDrive/Gambar/clock-increasing-chart-workflow-productivity-increase-work-performance-optimization-efficiency-indicator-rising-effectiveness-metrics-vector-isolated-concept-metaphor-illustration.png" />
+                    </image>
+                </ImageView>
+                <Label alignment="CENTER" prefHeight="48.0" prefWidth="194.0" style="-fx-text-fill: #333333;" text="ACHIEVLT" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="Poppins SemiBold" size="34.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
             </children>
         </VBox>
     </children>
